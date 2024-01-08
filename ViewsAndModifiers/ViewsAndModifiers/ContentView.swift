@@ -15,10 +15,12 @@ struct ContentView: View {
         .font(.title2)
     let spell3 = Text("Stupify")
         .font(.title3)
-    @ViewBuilder var spells: some View {
-        spell1
-        spell2
-        spell3
+    var spells: some View {
+        VStack {
+            spell1
+            spell2
+            spell3
+        }
     }
     
     var body: some View {
