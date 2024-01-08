@@ -7,24 +7,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    
-    let spell1 = Text("Winggadium Leviosa")
-        .font(.title)
-    let spell2 = Text("Diablo Protega")
-        .font(.title2)
-    let spell3 = Text("Stupify")
-        .font(.title3)
-    var spells: some View {
-        VStack {
-            spell1
-            spell2
-            spell3
-        }
-    }
-    
+struct CapsuleText: View {
+    let text: String
     var body: some View {
-        spells
+        Text(text)
+            .font(.title)
+            .padding(20)
+            .foregroundStyle(.white)
+            .background(.blue)
+            .clipShape(.capsule)
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        CapsuleText(text: "Winggadium Leviosa")
+        CapsuleText(text: "Stupify")
     }
 }
 
