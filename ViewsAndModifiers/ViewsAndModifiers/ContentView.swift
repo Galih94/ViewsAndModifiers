@@ -10,12 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @State var isRed = false
     var body: some View {
-        Button("Hello world") {
-            print(type(of: self.body))
-            isRed.toggle()
+        VStack {
+            Text("1")
+            Text("2")
+            Text("3")
+            Text("4")
         }
-        .background( isRed ? .red : .green )
-        .frame(width: 200, height: 200)
+        .font(.largeTitle)
     }
 }
 
