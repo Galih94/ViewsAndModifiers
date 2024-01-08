@@ -12,6 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("1")
+                .font(.subheadline)
             Text("2")
             Text("3")
             Text("4")
