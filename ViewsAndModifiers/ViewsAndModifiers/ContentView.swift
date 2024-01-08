@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    let isRed = false
+    @State var isRed = false
     var body: some View {
         Button("Hello world") {
             print(type(of: self.body))
+            isRed.toggle()
         }
         .background( isRed ? .red : .green )
         .frame(width: 200, height: 200)
