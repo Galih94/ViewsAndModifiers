@@ -12,12 +12,12 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("1")
-                .font(.subheadline)
+                .blur(radius: 0)
             Text("2")
             Text("3")
             Text("4")
         }
-        .font(.largeTitle)
+        .blur(radius: 5)
     }
 }
 
