@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    let isRed = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Button("Hello world") {
+            print(type(of: self.body))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.red)
+        .background( isRed ? .red : .green )
+        .frame(width: 200, height: 200)
     }
 }
 
