@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isRed = false
+    let spell1 = Text("Winggadium Leviosa")
+        .font(.title)
+    let spell2 = Text("Diablo Protega")
+        .font(.title2)
+    let spell3 = Text("Stupify")
+        .font(.title3)
     var body: some View {
-        VStack {
-            Text("1")
-                .blur(radius: 0)
-            Text("2")
-            Text("3")
-            Text("4")
-        }
-        .blur(radius: 5)
+        spell1
+        spell2
+        spell3
     }
 }
 
