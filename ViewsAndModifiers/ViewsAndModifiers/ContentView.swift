@@ -22,6 +22,7 @@ struct CapsuleText: View {
 struct ContentView: View {
     var body: some View {
         CapsuleText(text: "Winggadium Leviosa")
+            .foregroundStyle(.brown)
         CapsuleText(text: "Stupify")
     }
 }
