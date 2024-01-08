@@ -13,7 +13,6 @@ struct CapsuleText: View {
         Text(text)
             .font(.title)
             .padding(20)
-            .foregroundStyle(.white)
             .background(.blue)
             .clipShape(.capsule)
     }
