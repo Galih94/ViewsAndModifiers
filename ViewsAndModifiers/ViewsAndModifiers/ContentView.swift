@@ -27,7 +27,19 @@ struct GridStack<Content: View>: View {
 struct ContentView: View {
     var body: some View {
         GridStack(rows: 4, columns: 5) { row, col in
-            Text("R:\(row) C:\(col)")
+            if row.isMultiple(of: 2) {
+                if col.isMultiple(of: 2) {
+                    Color.yellow
+                } else {
+                    Color.red
+                }
+            } else {
+                if col.isMultiple(of: 2) {
+                    Color.green
+                } else {
+                    Color.blue
+                }
+            }
         }
     }
 }
