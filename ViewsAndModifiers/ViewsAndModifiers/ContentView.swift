@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct CapsuleText: View {
-    let text: String
-    var body: some View {
-        Text(text)
-            .font(.title)
-            .padding(20)
+struct Title: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundStyle(.white)
+            .padding()
             .background(.blue)
-            .clipShape(.capsule)
+            .clipShape(.rect(cornerRadius: 10))
+        
     }
 }
 
 struct ContentView: View {
     var body: some View {
-        CapsuleText(text: "Winggadium Leviosa")
-            .foregroundStyle(.brown)
-        CapsuleText(text: "Stupify")
+        Text("Hello world!")
+            .modifier(Title())
     }
 }
 
