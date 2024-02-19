@@ -19,6 +19,26 @@ struct Title: ViewModifier {
     }
 }
 
+struct Watermark: ViewModifier {
+    var text: String
+    func body(content: Content) -> some View {
+        ZStack(alignment: .bottomTrailing) {
+            content
+            Text(text)
+                .font(.caption)
+                .foregroundStyle(.white)
+                .padding(5)
+                .background(.gray)
+        }
+    }
+}
+
+extension View {
+    func watermarked(with text: String) -> some View {
+        modifier(Watermark(text: text))
+    }
+}
+
 extension View {
     func titleStyle() -> some View {
         modifier(Title())
@@ -27,8 +47,14 @@ extension View {
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello world!")
-            .titleStyle()
+        ZStack {
+            Color.yellow
+            Text("Hello world!")
+                .titleStyle()
+        }
+        .frame(maxWidth: 300, maxHeight: 300
+        )
+        .watermarked(with: "made by Galih")
     }
 }
 
